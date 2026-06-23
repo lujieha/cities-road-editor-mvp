@@ -1,0 +1,2 @@
+import * as THREE from 'three'
+export class RenderManager { renderer: THREE.WebGLRenderer; constructor(canvas:HTMLCanvasElement){ this.renderer=new THREE.WebGLRenderer({canvas, antialias:true}); this.renderer.setPixelRatio(Math.min(devicePixelRatio,2)); this.renderer.setClearColor(0x0f172a); this.renderer.shadowMap.enabled=true } resize(w:number,h:number){ this.renderer.setSize(w,h,false) } render(scene:THREE.Scene,camera:THREE.Camera){ this.renderer.render(scene,camera) } dispose(){ this.renderer.dispose() } }
