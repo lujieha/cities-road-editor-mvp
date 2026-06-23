@@ -1,0 +1,2 @@
+<template><div class="toolbar-block"><div class="panel-title">建造模式</div><el-radio-group v-model="editor.mode"><el-radio-button label="straight">直线</el-radio-button><el-radio-button label="curve">曲线</el-radio-button><el-radio-button label="upgrade">升级</el-radio-button><el-radio-button label="delete">删除</el-radio-button></el-radio-group><div style="margin-top:8px"><el-switch v-model="editor.snapEnabled" active-text="吸附" /></div></div></template>
+<script setup lang="ts">import { useEditorStore } from '../stores/editorStore'; const editor=useEditorStore()</script>
